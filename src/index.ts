@@ -1,5 +1,12 @@
-function hello(name: string) {
-  return `Hello ${name}!`;
-}
+'use strict'
 
-console.log(hello("world"));
+import express from 'express'
+
+const app = express()
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(3000, () => {
+  console.log('Running on http://localhost:3000')
+})
