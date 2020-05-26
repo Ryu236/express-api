@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 # Install dependencies of application
 # Copy package.json and package-lock.json used by wildcard.
-COPY package*.json .
+COPY package*.json ./
 
 RUN npm install
 
@@ -13,4 +13,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD ["node", "dist/src/index.js"]
+CMD ["npm", "run", "dev"]
